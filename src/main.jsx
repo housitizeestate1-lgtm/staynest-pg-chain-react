@@ -8,15 +8,15 @@ import {
 } from "lucide-react";
 import "./styles.css";
 
-const WHATSAPP_NUMBER = "919876543210"; // Replace with your WhatsApp number, including country code
-const CONTACT_PHONE = "+91 98765 43210"; // Replace with your business phone number
+const WHATSAPP_NUMBER = "918130871080"; // Replace with your WhatsApp number, including country code
+const CONTACT_PHONE = "+91 8130871080"; // Replace with your business phone number
 
 const properties = [
   {
-    id: 1, name: "The Green House", location: "Sector 62, Noida", area: "Sector 62",
-    rent: 8500, rating: "4.8", reviews: 124, type: "Unisex", sharing: "Double sharing",
+    id: 1, name: "1 BHK", location: "Sector 121, Noida", area: "Sector 121",
+    rent: "15000 including maintainence", rating: "4.8", reviews: 124, type: "Semi Furninshed",
     tag: "Most popular", image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85",
-    amenities: ["Wi-Fi", "Meals", "AC", "Laundry"], available: "3 beds available"
+    amenities: ["Builder Floor"]
   },
   {
     id: 2, name: "Urban Nest", location: "Sector 18, Noida", area: "Sector 18",
@@ -123,7 +123,7 @@ function App() {
         <a href="#home" className="brand" aria-label="Housitize Estate home"><span className="brand-mark"><House size={21} strokeWidth={2.4} /></span><span>Housitize Estate<span className="brand-dot">.</span><small>LIVE BETTER, EVERY DAY</small></span></a>
         <button className="mobile-toggle" onClick={() => setMobileMenu(!mobileMenu)} aria-label="Toggle menu">{mobileMenu ? <X /> : <Menu />}</button>
         <nav className={mobileMenu ? "nav-links open" : "nav-links"}>
-          <a href="#properties" onClick={() => setMobileMenu(false)}>Find a PG</a>
+          <a href="#properties" onClick={() => setMobileMenu(false)}>Find Your Dream Home</a>
           <a href="#why" onClick={() => setMobileMenu(false)}>Why Housitize Estate</a>
           <a href="#locations" onClick={() => setMobileMenu(false)}>Locations</a>
           <a href="#contact" onClick={() => setMobileMenu(false)}>Contact</a>
@@ -186,7 +186,7 @@ function App() {
         <section className="cta-section" id="contact"><div className="cta-spark"><Sparkles size={23}/></div><div><div className="eyebrow"><span></span> LET'S FIND YOUR PLACE</div><h2>Your next chapter<br />starts <em>right here.</em></h2><p>Tell us what you're looking for. Our team will help you find a stay that feels right.</p></div><div className="cta-actions"><a className="cta-whatsapp" href={whatsappLink("Hi Housitize Estate, I'm looking for a PG in Noida. Please help me with available options.")} target="_blank" rel="noreferrer"><MessageCircle size={18}/> Chat on WhatsApp <ArrowRight size={17}/></a><a className="cta-phone" href={`tel:${CONTACT_PHONE.replaceAll(" ", "")}`}><Phone size={16}/> {CONTACT_PHONE}</a><small>Typically replies within business hours</small></div></section>
       </main>
 
-      <footer className="footer"><div className="footer-main"><div className="footer-brand"><a href="#home" className="brand"><span className="brand-mark"><House size={21}/></span><span>Housitize Estate<span className="brand-dot">.</span><small>LIVE BETTER, EVERY DAY</small></span></a><p>Thoughtful spaces for people building their next big thing. Find comfort, community and a place to call your own.</p><div className="social-row"><a href={whatsappLink("Hi Housitize Estate!")} target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17}/></a><a href={`tel:${CONTACT_PHONE.replaceAll(" ", "")}`} aria-label="Call"><Phone size={17}/></a></div></div><div className="footer-column"><b>Explore</b><a href="#properties">Find a PG</a><a href="#why">Why Housitize Estate</a><a href="#locations">Locations</a></div><div className="footer-column"><b>Popular areas</b><a href="#properties" onClick={() => setArea("Sector 62")}>Sector 62</a><a href="#properties" onClick={() => setArea("Sector 18")}>Sector 18</a><a href="#properties" onClick={() => setArea("Sector 137")}>Sector 137</a></div><div className="footer-column footer-contact"><b>Get in touch</b><p><MapPin size={16}/> Noida, Uttar Pradesh, India</p><p><Phone size={16}/> {CONTACT_PHONE}</p><p><Clock3 size={16}/> Mon – Sun, 9 AM – 8 PM</p><a className="footer-whatsapp" href={whatsappLink("Hi Housitize Estate, I have a question.")} target="_blank" rel="noreferrer"><MessageCircle size={15}/> Message us</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Housitize Estate Living. All rights reserved.</span><span>Made for better living <Heart size={13} fill="currentColor"/></span></div></footer>
+      <footer className="footer"><div className="footer-main"><div className="footer-brand"><a href="#home" className="brand"><span className="brand-mark"><House size={15}/></span><span>Housitize Estate<span className="brand-dot">.</span><small>LIVE BETTER, EVERY DAY</small></span></a><p>Thoughtful spaces for people building their next big thing. Find comfort, community and a place to call your own.</p><div className="social-row"><a href={whatsappLink("Hi Housitize Estate!")} target="_blank" rel="noreferrer" aria-label="WhatsApp"><MessageCircle size={17}/></a><a href={`tel:${CONTACT_PHONE.replaceAll(" ", "")}`} aria-label="Call"><Phone size={17}/></a></div></div><div className="footer-column"><b>Explore</b><a href="#properties">Find Your Dream Home</a><a href="#why">Why Housitize Estate</a><a href="#locations">Locations</a></div><div className="footer-column"><b>Popular areas</b><a href="#properties" onClick={() => setArea("Sector 62")}>Sector 62</a><a href="#properties" onClick={() => setArea("Sector 18")}>Sector 18</a><a href="#properties" onClick={() => setArea("Sector 137")}>Sector 137</a></div><div className="footer-column footer-contact"><b>Get in touch</b><p><MapPin size={16}/> Noida, Uttar Pradesh, India</p><p><Phone size={16}/> {CONTACT_PHONE}</p><p><Clock3 size={16}/> Mon – Sun, 9 AM – 8 PM</p><a className="footer-whatsapp" href={whatsappLink("Hi Housitize Estate, I have a question.")} target="_blank" rel="noreferrer"><MessageCircle size={15}/> Message us</a></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Housitize Estate Living. All rights reserved.</span><span>Made for better living <Heart size={13} fill="currentColor"/></span></div></footer>
 
       <a className="floating-whatsapp" href={whatsappLink("Hi Housitize Estate, I'm interested in your PGs in Noida.")} target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp"><MessageCircle size={25}/><span>Chat with us</span></a>
 
